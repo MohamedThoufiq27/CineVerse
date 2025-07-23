@@ -95,7 +95,7 @@ const Card = () => {
   if (!movie) return <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white text-xl">Loading...</div>;
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-900 bg-cover bg-fixed bg-center p-4" style={{ backgroundImage: `url(${fanart || movie.Poster})` }}>
+    <div className="flex justify-center items-center min-h-screen bg-gray-900 bg-cover bg-fixed bg-center p-4" style={{ backgroundImage: `url('/image.png')` }}>
       <LiquidGlass title={movie.Title}>
         <div className='w-full max-w-7xl p-6 flex flex-col gap-8'>
 
