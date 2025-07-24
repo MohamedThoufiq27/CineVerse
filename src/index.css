@@ -161,3 +161,47 @@
     display: none;
   }
 }
+
+.typing-effect-simple {
+  display: inline-block; /* Or 'block', depending on your layout */
+  width: max-content; /* Ensures the container is only as wide as the text */
+  white-space: nowrap; /* Keeps the text on a single line */
+  overflow: hidden; /* Hides the text that hasn't been "typed" yet */
+
+  /* The blinking cursor effect */
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
+
+  /* The Animation */
+  /* - 'typing' is the name of the keyframe animation.
+    - '3.3s' is the total duration.
+    - 'steps(55)' tells the animation to proceed in 55 discrete steps.
+    - 'forwards' ensures the element stays at 100% width when done.
+    - 'blink' is the name of the cursor animation.
+  */
+  animation: 
+    typing 3.3s steps(55) forwards,
+    blink 1s step-end infinite;
+}
+
+/* Keyframes for the typing effect (revealing the text) */
+@keyframes typing {
+  from { 
+    width: 0; 
+  }
+  to { 
+    width: 100%; 
+  }
+}
+
+/* Keyframes for the blinking cursor */
+@keyframes blink {
+  from, to { 
+    border-color: transparent; 
+  }
+  50% { 
+    border-color: rgba(255, 255, 255, 0.75); 
+  }
+}
+
+/* A helper class for gradient text (optional) */
+

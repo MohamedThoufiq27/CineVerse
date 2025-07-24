@@ -30,7 +30,7 @@ export const updateSearchCount = async(query,movie)=>{
             await database.createDocument(DATABASE_ID,COLLECTION_ID,ID.unique(),{
                 query,
                 count : 1,
-                movie_slug : movie.ids.slug,
+                movie_slug : movie.ids.imdb,
                 poster_url : `https://${movie.images?.poster[0]}`,
             })
         }
