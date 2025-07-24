@@ -2,7 +2,7 @@
 
   CineVerse is a sleek and dynamic web application for discovering movies. Search for any film, browse real-time trending lists from Trakt.tv, and see what's popular among the app's users. Built with React, it features a modern interface and an efficient search experience.
 
-
+Try the App - https://cine-verse-27.vercel.app/
 
 # 📷 Screenshots : 
 
