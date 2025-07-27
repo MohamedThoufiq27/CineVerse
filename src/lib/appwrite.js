@@ -1,4 +1,4 @@
-import {Account, Client, Databases, ID, Query} from 'appwrite';
+import { Client, Databases, ID, Query} from 'appwrite';
 
 const PROJECT_ID=import.meta.env.VITE_APPWRITE_PROJECT_ID;
 const DATABASE_ID=import.meta.env.VITE_APPWRITE_DATABASE_ID;
@@ -8,7 +8,7 @@ const client = new Client()
     .setEndpoint('https://fra.cloud.appwrite.io/v1')
     .setProject(PROJECT_ID)
 
-const account = new Account(client);
+
 const database = new Databases(client);
 
 export const updateSearchCount = async(query,movie)=>{
@@ -32,6 +32,7 @@ export const updateSearchCount = async(query,movie)=>{
                 count : 1,
                 movie_slug : movie.ids.imdb,
                 poster_url : `https://${movie.images?.poster[0]}`,
+                title:movie.title
             })
         }
 

@@ -149,8 +149,9 @@ const Home = () => {
                             {trendingMovies.map((movie, index) => (
                                 <Link to={`/movie/${movie.movie_slug}`} key={movie.movie_slug}>
                                     <li key={movie.movie_slug}>
-                                        <p>{index + 1}</p>
-                                        <img src={movie.poster_url} alt={movie.title} />
+                                        <p className=''>{index + 1}</p>
+                                        <img className='' src={movie.poster_url} alt={movie.title} />
+                                        <span>{movie.title}</span>
                                     </li>
                                 </Link>
                             ))}

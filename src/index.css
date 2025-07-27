@@ -62,11 +62,12 @@
     @apply mt-20;
 
     & ul {
-      @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
+      @apply relative flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
     }
 
     & ul li {
-      @apply min-w-[230px] flex flex-row items-center;
+      /* 👇 Added 'relative' to act as a container for the span */
+      @apply relative min-w-[230px] flex flex-row items-center truncate;
     }
 
     & ul li p {
@@ -75,6 +76,11 @@
 
     & ul li img {
       @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
+    }
+
+    & ul li span {
+      /* 👇 Added 'w-full' to give the element a bounded width */
+      @apply text-xl text-light-100 absolute bottom-8 truncate pl-16 z-10 w-full;
     }
   }
 

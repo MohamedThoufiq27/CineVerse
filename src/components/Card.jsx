@@ -26,7 +26,7 @@ const DetailItem = ({ label, value }) => (
   <div className="py-3 border-b border-gray-700/50 flex">
     <p className="text-[#A8B5DB] font-semibold w-36 flex-shrink-0">{label}</p>
     <p className="text-[#D6C7FF]">{value}</p>
-  </div>
+  </div>    
 );
 
 const formatRuntime = (runtimeStr) => {
@@ -53,7 +53,7 @@ const RatingBadge = ({ Source, Value }) => {
     }
 
     let icon;
-    if (Source.includes('Internet Movie Database')) icon = <FaImdb className="text-yellow-400" size="1.5em" />;
+     if (Source.includes('Internet Movie Database')) icon = <FaImdb className="text-yellow-400" size="1.5em" />;
     else if (Source.includes('Rotten Tomatoes')) icon = <SiRottentomatoes className="text-red-500" size="1.5em" />;
     else if (Source.includes('Metacritic')) icon = <SiMetacritic className="text-green-500" size="1.5em" />;
     
@@ -132,7 +132,7 @@ const Card = () => {
 
           {/* ====== ROW 1: HEADER ====== */}
           <header className="flex justify-between items-center w-full">
-            <div>
+            <div className=''>
                 <h1 className="text-4xl lg:text-5xl font-bold text-white">{movie.Title}</h1>
                 <div className='flex items-center flex-wrap gap-x-3 text-gray-400 mt-2'>
                     <span>{movie.Year}</span>
