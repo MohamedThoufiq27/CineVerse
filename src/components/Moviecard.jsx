@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const Moviecard = ({movie:{images,title,year,language,rating}}) => {
   
   const [imgUrl,setImgUrl] = useState(); 
+  
   useEffect(()=>{
     const url=`https://${images?.poster[0]}`;
     setImgUrl(url);

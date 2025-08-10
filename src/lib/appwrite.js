@@ -12,7 +12,7 @@ const client = new Client()
 const database = new Databases(client);
 
 export const updateSearchCount = async(query,movie)=>{
-    //use appwrite api to search if the search term exist in database
+    //use appwrite api to search if the search term exist in database 
     try{
         const result=await database.listDocuments(DATABASE_ID,COLLECTION_ID,[
             Query.equal('query',query),

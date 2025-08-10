@@ -6,6 +6,7 @@ import Spinner from './Spinner';
 // --- ICONS ---
 import { FaStar, FaPlay, FaArrowUp, FaImdb } from 'react-icons/fa';
 import { SiMetacritic, SiRottentomatoes } from 'react-icons/si';
+import Spline from '@splinetool/react-spline';
 
 // --- API CONFIG ---
 const OMDB_API_URL = 'https://www.omdbapi.com/';
@@ -119,12 +120,18 @@ const Card = () => {
   if (!movie) return <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white text-xl gap-x-4">Loading... <Spinner /></div>;
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-900 bg-cover bg-fixed bg-center p-4" style={{ backgroundImage: `url('/image.png')` }}>
+    <div 
+      className="relative flex justify-center items-center min-h-screen bg-gray-900 p-4"
+    >
+      <Spline 
+        className="absolute top-0 left-0 w-full h-full"
+        scene="https://prod.spline.design/qd19w3E6qNK7zdSO/scene.splinecode" 
+      />
       <div className="
-        relative p-6 rounded-2xl shadow-xl
+        relative z-10 p-6 rounded-2xl shadow-xl
         bg-gradient-to-br from-white/30 to-white/10
         border border-t-white/40 border-l-white/40 border-b-white/20 border-r-white/20
-        backdrop-blur-lg
+        backdrop-blur-2xl
         transition-transform duration-300 ease-out
       "
     >
